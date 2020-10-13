@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<title>our website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.navbar {
+  overflow: hidden;
+  background-color: #c0c0c0;
+ font-size: 35px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+  float: left;
+  font-size: 35px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: initial;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: blue;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #0000ff;
+}
+
+.show {
+  display: block;
+}
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+
+* {
+  box-sizing: border-box;
+}
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myInput {
+  background-image: url(https://www.w3schools.com/css/searchicon.png);
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+ #selectbox{
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 2px solid #ddd;
+  margin-bottom: 12px;
+ }
+</style>
+<body>
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Close Menu</a>
+  <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Food</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <div class="w3-right w3-padding-16"><img src="dist/images/manimage.jpg" class="img-responsive img-circle" width="70px"; height="30px"; /></div>
+    <div class="w3-center w3-padding-16"><img src="dist/images/logo.png" class="img-responsive img-circle" width="70px"; height="30px"; />CA Final</div>
+  </div>
+</div>
+
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <div class="w3-right w3-padding-16"><img src="dist/images/manimage.jpg" class="img-responsive img-circle" width="70px"; height="30px"; /></div>
+    <div class="w3-center w3-padding-16"><img src="dist/images/logo.png" class="img-responsive img-circle" width="70px"; height="30px"; />CA Final</div>
+  </div>
+   <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for papers Chapters and Lactures.." title="Type in a name"  style="width:100%;">
+</div>
+ 
+ <div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+  
+  </div>
+  </div>
+<!--papers container! -->
+<div class="w3-padding-16" style="max-width:1200px;margin-top:100px">
+ <div class="w3-padding-16" id="food">
+    <div class="w3-quarter">
+      
+      <h1>Papers</h1>
+    
+    </div>
+ </div>
+</div>
+<!-- dropdown-->
+
+ <select name="subject" id="selectbox" style="width:100%;">
+    <option value="Papers1" selected="selected">Papers1
+	Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum.
+	</option>
+	 <option value="Papers2" >Strategic Cost management and performance Eveulation</option>
+ </select>
+<!-- Subject -->
+<div class= "navbar" >
+  <a class="scroll" href="#Series1">Series1</a>
+  <a class="scroll" href="#Series2">Series2</a>
+  <a class="scroll" href="#Series3">Series3</a>
+
+ 
+</div>
+
+<!-- !PAGE CONTENT! -->
+
+  <!-- First Photo Grid-->
+  <div class="w3-padding-16" id="food">
+    <div class="w3-quarter" id="Series1">
+      
+      <h1>Series1</h1>
+    <p> The functioning of public libraries In India, there is no uniform, country-wide system of administration for public libraries. Public libraries are run by state governments using taxes from local administrative bodies, such as city corporations or village councils.</p>
+    </div>
+    
+    <div class="w3-quarter"id="Series2">
+      
+      <h1>Series2</h1>
+      <p>The functioning of public libraries In India, there is no uniform, country-wide system of administration for public libraries. Public libraries are run by state governments using taxes from local administrative bodies, such as city corporations or village councils.</p>
+    </div>
+    <div class="w3-quarter" id="Series3">
+     
+      <h1>Series3</h1>
+      <p>The functioning of public libraries In India, there is no uniform, country-wide system of administration for public libraries. Public libraries are run by state governments using taxes from local administrative bodies, such as city corporations or village councils.</p>
+      
+    </div>
+    <div class="w3-quarter">
+     
+     <h1>Series4</h1>
+      <p>The functioning of public libraries In India, there is no uniform, country-wide system of administration for public libraries. Public libraries are run by state governments using taxes from local administrative bodies, such as city corporations or village councils.</p>
+    </div>
+  </div>
+  
+ 
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+  
+  <hr id="about">
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32 w3-center">  
+    <h3>About Me, The Food Man</h3><br>
+   
+    <div class="w3-padding-32">
+      <h4><b>I am Who I Am!</b></h4>
+      <h6><i>With Passion For Real, Good Food</i></h6>
+      <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+    </div>
+  </div>
+  <hr>
+  
+ 
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
